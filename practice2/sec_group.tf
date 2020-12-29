@@ -26,7 +26,7 @@ resource "aws_security_group" "practice2" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-   ingress {
+  ingress {
     description = "TLS from VPC"
     from_port   = 80
     to_port     = 80
