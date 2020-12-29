@@ -5,7 +5,6 @@ resource "aws_instance" "web" {
   key_name                    = "${aws_key_pair.deployed.key_name}"
   user_data                   = "${file("userdata_file.sh")}"
   availability_zone           = "us-east-1a"
-
   vpc_security_group_ids = [
     "${aws_security_group.practice2.id}",
   ]
