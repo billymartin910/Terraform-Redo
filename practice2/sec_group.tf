@@ -1,14 +1,6 @@
-resource "aws_security_group" "practice2" {
+  resource "aws_security_group" "practice2" {
   name        = "practice2"
   description = "Allow TLS inbound traffic"
-
-  ingress {
-    description = "TLS from VPC"
-    from_port   = 443
-    to_port     = 443
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
 
   ingress {
     description = "TLS from VPC"
@@ -18,15 +10,23 @@ resource "aws_security_group" "practice2" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  ingress {
+   ingress {
     description = "TLS from VPC"
-    from_port   = 25
-    to_port     = 25
+    from_port   = 22
+    to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  ingress {
+ ingress {
+    description = "TLS from VPC"
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+ ingress {
     description = "TLS from VPC"
     from_port   = 80
     to_port     = 80

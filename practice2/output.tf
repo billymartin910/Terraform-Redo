@@ -1,19 +1,15 @@
-output "instance id" {
-value = "${aws_instance.web.id}"
-}
- 
-output "keypair" {
-    value = "${aws_instance.web.key_name}"
+output "public ip" {
+    value = "${aws_instance.web3.public_ip}"
 }
 
-output "PIP" {
-    value = "${aws_instance.web.public_ip}"
+output "private dns" {
+    value = "${aws_instance.web3.private_dns}"
 }
 
-output "Route Name" {
-    value = "${aws_route53_record.www.name}"
+output "keyname" {
+    value = "${aws_instance.web3.key_name}"
 }
 
-output "my message" {
-    value = "Important Message Example"
+output "az" {
+    value = "${aws_instance.web3.availability_zone}"
 }
