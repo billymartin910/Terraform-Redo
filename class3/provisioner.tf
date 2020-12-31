@@ -5,8 +5,8 @@ resource "aws_instance" "ubuntu" {
   key_name = "${aws_key_pair.deployed.key_name}"
   associate_public_ip_address = true
 
-  provisioner "remote-exec" {
-  connection {
+   provisioner "remote-exec" {
+    connection {
     type     = "ssh"
     user     = "ubuntu"
     private_key = "${file("~/.ssh/id_rsa")}"
@@ -17,6 +17,17 @@ resource "aws_instance" "ubuntu" {
       "sudo systemctl start apache2",
     ]
   }
+
+#   provisioner "remote-exec" {
+#   connection {
+#     type     = "ssh"
+#     user     = "ubuntu"
+#     private_key = "${file("~/.ssh/id_rsa")}"
+#     host     = "${aws_instance.ubuntu.public_ip}"
+#   }
+#     script =  "${file("userdata.sh")}"
+#   }
+
 
   provisioner "file" {
   connection {
