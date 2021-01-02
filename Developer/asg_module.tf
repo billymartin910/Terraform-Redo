@@ -17,7 +17,7 @@ module "python" {
 
 module "python-eu" {
   source           = "../class4"
-  region           = "eu-west-1"
+  region           = "us-east-1"
   min_size         = "1"
   max_size         = "1"
   desired_capacity = "1"
