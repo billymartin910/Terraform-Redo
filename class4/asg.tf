@@ -1,13 +1,13 @@
 resource "aws_autoscaling_group" "bar" {
   availability_zones = [
-    "us-east-1a",
-    "us-east-1b",
-    "us-east-1c",
+    "${var.region}a",
+    "${var.region}b",
+    "${var.region}c",
   ]
 
-  desired_capacity = 1
-  min_size         = 1
-  max_size         = 5
+  desired_capacity = "${var.desired_capacity}"
+  min_size         = "${var.min_size}"
+  max_size         = "${var.max_size}"
 
   mixed_instances_policy {
     launch_template {
