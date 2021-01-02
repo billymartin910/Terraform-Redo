@@ -4,6 +4,7 @@ module "webapp" {
   min_size         = "1"
   max_size         = "1"
   desired_capacity = "1"
+  image_owner      = "137112412989"
 }
 
 module "python" {
@@ -12,8 +13,8 @@ module "python" {
   min_size         = "1"
   max_size         = "1"
   desired_capacity = "1"
+  image_owner      = "137112412989"
 }
-
 
 module "python-eu" {
   source           = "../class4"
@@ -21,5 +22,5 @@ module "python-eu" {
   min_size         = "1"
   max_size         = "1"
   desired_capacity = "1"
+  image_owner      = "137112412989"
 }
-
