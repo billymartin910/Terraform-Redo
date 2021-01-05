@@ -15,6 +15,6 @@ module "VPC" {
     Team        = "DevOps"
     Department  = "Operations"
     Bill        = "CFO"
-    Quarter     = "4"
+    Quarter     = "1"
   }
 }
