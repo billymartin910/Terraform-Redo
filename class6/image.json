@@ -3,7 +3,7 @@
 "builders": [
   {
     "type": "amazon-ebs",
-    "region": "us-east-2",
+    "region": "{{user `region`}}",
     "source_ami_filter": {
       "filters": {
           "virtualization-type": "hvm",
