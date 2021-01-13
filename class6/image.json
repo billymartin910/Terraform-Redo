@@ -14,7 +14,7 @@
   {
 "type": "file",
    "source": "files/welcome.txt",
-    "destination": "/home/ubuntu"
+    "destination": "/tmp/"
      },
   {
 "type": "shell",
