@@ -14,11 +14,11 @@
       "instance_type": "t2.micro",
       "ssh_username": "centos",
       "ami_regions": [
-          "us-east-2",
-          "us-west-1",
-          "us-west-2"
-      ],
-      "ami_name": "packer-example {{timestamp}}"
+        "us-east-2",
+        "us-west-1",
+        "us-west-2"
+    ],
+      "ami_name": "nagios-example {{timestamp}}"
     }
   ],
   "provisioners": [
@@ -36,7 +36,7 @@
        },
     {
     "type": "shell",
-        "script": "files/example.sh"
+        "script": "files/nagios.sh"
         },
       {
       "type": "breakpoint",
